@@ -1,0 +1,35 @@
+<ion-view view-title="Auto News">
+<br><br>
+    <div class="bar bar-subheader bar-custom item-input-inset bar-light padding">
+                <label class="item-input-wrapper"><i class="icon ion-search placeholder-icon"></i>
+                <input type="search" ng-model="query" placeholder="Search">
+                </label>
+    </div>
+    <ion-content ng-class="{expanded:isExpanded}" class="animate-fade-slide-in" style="background: url(img/bkg.png) center; background-size: cover;"><ion-refresher on-refresh="doRefresh()"></ion-refresher><br><br>
+    <div class="container">
+    <ion-list class="list list-card">
+    <hr>
+        <ion-item ng-class="{'star': item.star}" ng-repeat="item in info | filter: query" class="item-text-wrap"  href="{{item.guid}}" target="_blank">
+                                 <!-- <img ng-src="img/{{item.avatar}}.jpg" alt=" {{item.version}} Photo">
+                                 <p> -->
+                                  <h3 style="color:#800000;"><b>{{item.post_title}}</b></h3>
+                                  <button class="btn btn-info"><b>Read More</b></a></button>
+                                  <hr>
+                                  <!-- <p style="font-family: monospace;" align="justify"><b>{{item.excerpt | trusted}}</b></p>
+                                  {{ item.content.length > 200 ? '&hellip;' : '...'}} 
+                                <button class="button-calm"> Read more >> </button>
+                                <hr> -->
+                              <!-- <button class="button button-clear icon ion-star button-assertive" ng-click="toggleStar(item)" ng-show="item.star"></button>
+                              <ion-option-button class="button-calm" ng-click="toggleStar(item)"><i class="icon ion-star"></i></ion-option-button>
+                              <ion-option-button class="button-energized" ng-click="onItemShare(item)"><i class="icon ion-android-share-alt"></i></ion-option-button -->
+        </ion-item>
+
+    </ion-list>
+    </div> 
+     <div ng-show="showLoader" class="loading"><!-- so this div containing img will be dislpayed only when the showLoader is equal to true-->
+        <img src="img/ldn2.gif"> <!-- or any other spinner -->
+    </div>
+    </ion-content>
+</ion-view>
+
+ <!-- <script src="http://news.adventist.org/en/all-news/javascript/data.js" type="text/javascript" charset="utf-8"></script> -->

@@ -1,0 +1,48 @@
+<ion-view view-title="View Cars">
+<br><br>
+    <div class="bar bar-subheader bar-custom item-input-inset bar-light padding">
+            <label class="item-input-wrapper"><i class="icon ion-search placeholder-icon"></i>
+                <input type="search" ng-model="query" placeholder="Search">
+            </label>
+    </div>
+    <ion-content ng-class="{expanded:isExpanded}" class="animate-fade-slide-in" style="background: url(img/bkg.png) center; background-size: cover;"><br><br><br>
+    <div class="container">
+
+    <ion-list class="list">
+
+
+   
+    <!-- <div id="spin" align="center" class="outer" ng-hide="loader"><ion-spinner class="spinner-energized" icon="lines"></ion-spinner><br/>Loading</div> -->
+             <ion-item ng-class="{'star': item.star}" ng-repeat="item in info | filter: query" class="item-thumbnail-left item-icon-right item-text-wrap" href="#/app/cars/{{item.vid}}">
+                          <img ng-src="http://supercar.ng/assets/images/cars/{{item.image1}}" style="border-radius: 5px;">
+
+
+                <div class="panel-group" align="center">
+                      <div class="panel panel-primary">
+                        <div class="panel-body">
+                                  <h4 style="color:#90100c;"><strong>Product ID:  {{item.vid}} </strong></h4>
+                        </div>
+                    </div>
+                </div>
+                          <h2 style="font-family: monospace; color:#0c5c90;"><b>Make: {{item.make_name}} </b></h2>
+                          <p style="color: #ff5733;"> <b>Model: {{item.model_name}}<b></p>
+                          <h4 style="color: #138d75;"><b>Year: {{item.year}}<!--  - {{item.vehicle_condition}} --></b></h4>
+                          <p><b>Location: {{item.location}}</b> </p>
+                          <button class="btn btn-info"> View Details >> </button>
+                          <hr>
+                          <!--  <p align="justify">{{item.description | limitTo: 30}} -->
+                          <!-- {{ item.description.length > 70 ? '&hellip;' : '...'}}</p> -->
+
+              <div id="share">
+                 <ion-option-button class="button-energized"><i class="icon ion-android-share-alt"></i></ion-option-button>
+              </div>
+                     
+             </ion-item>
+       </ion-list>
+    </div>
+     <div ng-show="showLoader" class="loading"><!-- so this div containing img will be dislpayed only when the showLoader is equal to true-->
+        <img src="img/ldn2.gif"> <!-- or any other spinner -->
+    </div>
+    </ion-content>
+</ion-view>
+

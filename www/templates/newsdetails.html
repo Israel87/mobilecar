@@ -1,0 +1,27 @@
+<ion-view view-title="Details">
+	<ion-content style="background: url(img/bkg.png) center; background-size: cover;">
+	<br><br>
+  <div id="background">
+  <div class="container">
+		<div class="list card padding">
+			<div class="item-text-wrap" ng-repeat="item in data | filter: { title: whichdata }">
+                          <h2  style="color:#800000;"><b id="somediv">{{item.title}}</b> </h2>
+                          <p>{{item.category[count]}} views.</p>
+                         <!--  <p><span am-time-ago="item.date | amFromUnix"></span></p> -->
+                          <button  onclick="myFunction()" class="btn btn-info" target="_blank"><i class="fa fa-facebook" ></i> <b> Share on Facebook </b> </button>
+                          <hr><hr>
+                          <!-- <h4>{{item.phonename}}</h4> -->
+                          <p id='linkurl' style="display: none;">{{item.link}}</p>
+                          <p style="font-family: monospace;" align="justify">{{item.content | trusted }}</p>
+             </div>
+
+          <div class="container" align="center">
+            <a ui-sref="app.home" style="text-decoration: none;"><b>Supercar.ng <br>Nigeria's No. 1 Indigenous Car Website</b></a>
+
+        </div>
+          <br>  <br>
+		</div>
+    </div>
+    </div>
+	</ion-content>
+</ion-view>

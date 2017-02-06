@@ -1,0 +1,77 @@
+<ion-view view-title="Home">
+    <ion-content ng-class="{expanded:$scope.isExpanded}" style="background: url(img/bkg.png) center; background-size: cover;">
+        <div class="hero slide-up" style="background-image: url('img/car9.png');">
+       
+        </div>
+        <div class="tabs tabs-light tabs-icon-top static">
+            <button ui-sref="app.cars" class="tab-item button-calm" style="text-decoration: none; width: 49%;">
+               <h4 style="color: #ffffff; font-style: monospace;"><b> All Cars </b></h4>
+            </button>
+         
+            <button ui-sref="app.news" class="tab-item button-calm" style="text-decoration: none; width: 49%;">
+               <h4 style="color: #ffffff; font-style: monospace;"><b>Auto News</b></h4>
+            </button>
+          
+        </div>
+        <br><br>
+    <div id="cover">
+
+        
+    </div>
+     <div class="container" align="center">
+            <a ui-sref="app.home" style="text-decoration: none;"><b>Nigeria's No. 1 Indigenous Car Website</b></a></div>
+            <br><br>
+        <div class="container">
+        <div class="list animate-fade-slide-in-right">
+             <a class="item item-avatar item-icon-right" href="http://www.supercar.ng/register" target="_blank">
+                <img src="img/sell5.png" style="border-radius: 5px;">
+                <button class="btn btn-default btn-block" style="font-family: sans-serif; color: #273746; text-align: center;" href="http://www.supercar.ng/register" target="_blank"> <b> SELL A CAR  </button>
+                <!-- <p></p> -->
+            </a>
+        </div>
+                <!-- <a class="btn btn-danger btn-block" href="http://www.supercar.ng/register" target="_blank"><b> SELL A CAR  </b></a><br> -->
+
+        <!-- div class="panel-group">
+              <div class="panel panel-primary"> -->   
+            <div class="container" style="margin-left: 70px;">
+                <div class="row">
+                  <!--   <div class="col-sm- col-centered">
+                                <a href="https://www.facebook.com/supercar.ng/" target="_blank">
+                                <img src="img/f.png" style="width:50px; height:50px;"></a>
+                            </div> -->
+
+                            <div class="col-sm-4">
+                                <a href="https://www.facebook.com/supercar.ng/" target="_blank">
+                                <img src="img/f.png"  style="width:35px; height:35px;"></a>
+                            </div>
+
+                             <div class="col-sm-4">
+                                <a href="https://twitter.com/supercarng/" target="_blank">
+                                <img src="img/twit.png"  style="width:35px; height:35px;"></a>
+                            </div>
+
+                             <div class="col-sm-4">
+                                <a href="https://www.instagram.com/supercarng/" target="_blank">
+                                <img src="img/inst4.png" style="width:35px; height:35px;"></a>
+                            </div>
+                                <!-- <a href="https://www.facebook.com/supercar.ng/" target="_blank" style="text-decoration: none;"> </a></li> 
+                                <li style="color:#ffffff;">
+                                <img src="img/inst.png" style="width:50px; height:50px;">
+                                <a href="https://twitter.com/supercarng/" target="_blank" style="text-decoration: none;"></a></li> 
+                                <li style="margin:10px; color:#ffffff;">
+                                <img src="img/twit.png" style="width:50px; height:50px;" href="https://www.instagram.com/supercarng/" target="_blank">
+                                </li>
+                            </ul> -->
+                </div>
+            </div>      
+    </ion-content>
+
+
+      <div class="card">
+        <button class="button button-light col col-20" ng-click="share('w', 'testing', '', 'http://google.co.uk' );"><i class="icon ion-social-whatsapp"></i></button>
+        <button class="button button-light col col-20" ng-click="share('f', 'testing', '', 'http://google.co.uk' );"><i class="icon ion-social-facebook"></i></button>
+        <button class="button button-light col col-20" ng-click="share('t', 'testing', '', 'http://google.co.uk' );"><i class="icon ion-social-twitter"></i></button>
+    </div>
+
+
+</ion-view>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title> Supercar.ng</title>
+
+    
+
+    
+    <link href='https://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic' rel='stylesheet' type='text/css'>
+
+
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/jssocials.css" rel="stylesheet">
+    <link href="css/jssocials-theme-flat.css" rel="stylesheet">
+
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="lib/ion-md-input/css/ion-md-input.min.css" rel="stylesheet">
+    <link href="lib/ionic-material/dist/ionic.material.min.css" rel="stylesheet">
+    
+    <link href="css/style.css" rel="stylesheet">
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/moment/moment.js"></script>
+    <!-- <script src="http://news.adventist.org/en/all-news/javascript/data.js" type="text/javascript" charset="utf-8"></script> -->
+    <script src="lib/angular-moment/angular-moment.js"></script>
+    <script src="lib/ionic-material/dist/ionic.material.min.js"></script>
+    <script src="lib/ion-md-input/js/ion-md-input.min.js"></script>
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="js/ng-cordova.min.js"></script>
+    <!-- <script src="cordova.js"></script> -->
+    <script src="cordova.js"></script>
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+</head>
+
+
+<body ng-app="starter">
+    <ion-nav-view></ion-nav-view>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/SocialSharing.js"></script>
+     <script src="js/jssocials.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+        <script type="text/javascript">
+               function myFunction() {
+                  /* ... action ... */ 
+
+                  var title = document.getElementById("somediv").innerHTML;
+                  // var iddiv = document.getElementById("iddiv").innerHTML;
+                  var linkurl = document.getElementById("linkurl").innerHTML;
+
+                  // var url = 'https://www.facebook.com/dialog/feed?app_id=1566607813607966&display=popup&name='+title+'&caption=Click link to find out more...&link=http%3a%2f%2f162.144.253.91%2fkcoba%2fNotice.aspx%3fID%3d'+iddiv+'&redirect_uri=http%3a%2f%2fcloud.chams.com%2fkcoba%2ffb_resp.aspx';
+
+                  var url = 'https://www.facebook.com/dialog/feed?app_id=625290544321313&display=popup&name='+title+'&caption=Click link to find out more...&link='+linkurl;
+
+                  console.log (title);
+                  console.log (url);
+
+                  window.open(url, 'Private','width=1000,height=400,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=300,top=100');
+
+                  return window.close();
+
+
+                }
+        </script>
+
+        <script>
+            $('.carousel').carousel({
+              interval: 3000
+            })
+        </script>
+
+
+
+
+  <script>
+       $("#share").jsSocials({
+            shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
+        });
+
+    </script>
+
+</body>
+</html>
+

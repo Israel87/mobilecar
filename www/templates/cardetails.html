@@ -1,0 +1,74 @@
+<ion-view view-title="More Details">
+	<ion-content style="background: url(img/bkg.png) center; background-size: cover;">
+	<br><br>
+  <div id="background">
+  <div class="container">
+		<div class="list card padding">
+			<div class="item-text-wrap" ng-repeat="item in info | filter: {vid: whichinfo}">
+   <div class="item item-image">
+
+          <ion-slide-box pager-click="navSlide(index)" auto-play="true" does-continue="true" show-nav-buttons="true">
+          <ion-slide-pager></ion-slide-pager>
+              <ion-slide>
+                  <img style="width: 100%; height: auto; border-radius: 5px;" src="http://supercar.ng/assets/images/cars/{{item.image1}}" alt="{{item.make_name}}">
+              </ion-slide>
+              <ion-slide>
+                  <img style="width: 100%; height: auto; border-radius: 5px;" src="http://supercar.ng/assets/images/cars/{{item.image2}}" alt="{{item.make_name}}">
+              </ion-slide>
+              <ion-slide>
+                  <img style="width: 100%; height: auto; border-radius: 5px;" src="http://supercar.ng/assets/images/cars/{{item.image3}}" alt="{{item.make_name}}">
+              </ion-slide>
+              <ion-slide>
+                  <img style="width: 100%; height: auto; border-radius: 5px;" src="http://supercar.ng/assets/images/cars/{{item.image4}}" alt="{{item.make_name}}">
+              </ion-slide>
+          </ion-slide-box>
+
+</div>
+<br>
+<div class="container"> <hr> </div>
+
+  <div class="panel-group" align="center">
+                      <div class="panel panel-primary">
+                        <div class="panel-body">
+                                  <h4 style="color:#90100c;"><strong>Product ID: {{item.vid}}</strong></h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container" align="center">
+                          <h2  style="font-family: monospace; color:#0c5c90;"><b id="somediv">{{item.make_name}}</b> </h2>
+                          <h3 style="color: #ff5733;""font-family: monospace;"><b> Model: {{item.model_name}}</b> </h3>
+                          <h4 style="color: #138d75;"><b>Year: {{item.year}}<!--  - {{item.vehicle_condition}} --></b></h4>
+                          <h4> <b>Price: {{item.price}}</b></h4>
+                          <h4><b> Location: {{item.location}} </b></h4><br>
+                  </div>
+                         <!--  <p><span am-time-ago="item.date | amFromUnix"></span></p> -->
+                          <!-- <button onclick="myFunction()" class="btn btn-info" target="_blank"><i class="fa fa-facebook" ></i> <b> Share on Facebook </b> </button> -->
+                         <div class="form-group">
+                          <div class="container">
+                          <div class="col-sm-12">
+                          <a href="tel:+2348079755783" class="btn btn-warning btn-block"><i class="icon ion-ios-telephone"></i> <b> Call us </b></a>
+                          </div>
+                          <br>
+
+                          <div class="col-sm-12">
+                          <a href="mailto:care@supercar.ng?Subject=Enquiries" class="btn btn-info btn-block" target="_top"><i class="icon ion-android-mail"></i> <b>Send us an email</b> </a>
+                          </div>
+                          </div>
+                        </div>
+                          <hr>
+                          <button class="btn btn-danger btn-block" ui-sref="app.news"> View Auto News </button>
+                   
+        </div>     
+		</div>
+    <div class="container" align="center">
+            <a ui-sref="app.home" style="text-decoration: none;"><b>Supercar.ng <br>Nigeria's No. 1 Indigenous Car Website</b></a>
+            <br> <br> <br>   
+        </div> 
+
+   
+    </div>
+    </div>
+	</ion-content>
+</ion-view>
+
